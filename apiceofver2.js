@@ -44,7 +44,7 @@ gsap.to('canvas.bg', {
   },
   opacity: 1,
 });
-gsap.to('canvas.bg-cloud.down', {
+gsap.to('div.bg-cloud.down', {
   scrollTrigger: {
     trigger: '.scroll',
     scroller: '.locomotive-scroll',
@@ -53,17 +53,6 @@ gsap.to('canvas.bg-cloud.down', {
   },
   opacity: 1,
 });
-// gsap.to('.noise', {
-//   scrollTrigger: {
-//     pin: true,
-//     trigger: '.scroll',
-//     scroller: '.locomotive-scroll',
-//     start: 'top 30%',
-//     end: 'center top',
-//     scrub: true,
-//   },
-//   display: 'flex',
-// });
 gsap.to('canvas.webgl', {
   scrollTrigger: {
     // pin: true,
@@ -75,7 +64,7 @@ gsap.to('canvas.webgl', {
   },
   opacity: 0,
 });
-gsap.to('canvas.bg-cloud.up', {
+gsap.to('div.bg-cloud.up', {
   scrollTrigger: {
     trigger: '.scroll',
     scroller: '.locomotive-scroll',
@@ -97,30 +86,14 @@ gsap.to('.move-link', {
 });
 
 document.querySelector('.move-link img').addEventListener('click', function () {
-  console.log('click');
+  window.open(
+    'https://forms.gle/KrSxxapHLeudTvnG6',
+    '_blank',
+    'noopener, noreferrer'
+  );
 });
 ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 ScrollTrigger.refresh();
-var bgCloud = document.querySelector('.bg-cloud.down');
-bgCloud.width = window.innerWidth;
-bgCloud.height = window.innerHeight;
-var context = bgCloud.getContext('2d');
-var img = new Image();
-img.onload = function () {
-  context.drawImage(img, 0, 0, bgCloud.width, bgCloud.height);
-};
-
-var bgDownCloud = document.querySelector('.bg-cloud.up');
-bgDownCloud.width = window.innerWidth;
-bgDownCloud.height = window.innerHeight;
-var contextDown = bgDownCloud.getContext('2d');
-var imgDown = new Image();
-imgDown.onload = function () {
-  contextDown.drawImage(imgDown, 0, 0, bgDownCloud.width, bgDownCloud.height);
-};
-
-img.src = '../cloud.jpg';
-imgDown.src = '../cloud.jpg';
 
 const COLORS = [
   { r: 255, g: 255, b: 255, a: 0.8 },
