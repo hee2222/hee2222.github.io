@@ -374,7 +374,8 @@
       .important-white {
         color: #ffffff !important;
       }
-      canvas {
+      canvas,
+      div.bg-cloud {
         position: fixed;
         top: 0;
         left: 0;
@@ -398,11 +399,16 @@
         opacity: 0;
         filter: blur(160px);
       }
-      canvas.bg-cloud.up {
+      div.bg-cloud {
+        background-image: url('../cloud.jpg');
+        background-position: center center;
+        background-size: cover;
+      }
+      div.bg-cloud.up {
         opacity: 0;
         z-index: -2;
       }
-      canvas.bg-cloud.down {
+      div.bg-cloud.down {
         opacity: 0;
         z-index: -4;
       }
@@ -413,15 +419,13 @@
         display: none;
         justify-content: center;
         align-items: inherit;
-        position: absolute;
+        position: fixed;
         z-index: 10;
-        left: 0;
-        bottom: 0;
-        right: 0;
       }
       .move-link img {
-        width: 500px;
-        aspect-ratio: 1 / 2;
+        max-width: 500px;
+        width: 100%;
+        height: auto;
         object-fit: contain;
         cursor: pointer;
       }
@@ -435,6 +439,11 @@
       .loading-bar.ended {
         transform-origin: 100% 0;
         transition: transform 1.5s ease-in-out;
+      }
+      @media (max-width: 600px) {
+        .move-link {
+          padding: 20px;
+        }
       }
     </style>
   </head>
@@ -626,11 +635,16 @@
     <div class="noise"></div>
     <div class="w-embed">
       <canvas class="bg"></canvas><canvas class="webgl"></canvas>
-      <canvas class="bg-cloud down"></canvas>
-      <canvas class="bg-cloud up"></canvas>
+      <div class="bg-cloud down"></div>
+      <div class="bg-cloud up"></div>
     </div>
-    <div class="locomotive-scroll">
-      <div class="move-link">
+    <div class="locomotive-scroll" id="stickySection">
+      <div
+        class="move-link"
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target="#stickySection"
+      >
         <img src="/banner.jpg" alt="" />
       </div>
       <div class="scroll"></div>
@@ -1231,6 +1245,6 @@
       type="text/javascript"
       src="https://unpkg.com/three@0.125.2/examples/js/loaders/GLTFLoader.js"
     ></script>
-    <script src="/apiceofver2.js"></script>
+    <script src="apiceofver2.js"></script>
   </body>
 </html>
