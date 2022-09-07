@@ -371,6 +371,9 @@
     <!-- barba js 추가 -->
     <script src="https://unpkg.com/@barba/core"></script>
     <style>
+      html, body {
+        height: 100%;
+      }
       .important-white {
         color: #ffffff !important;
       }
@@ -379,7 +382,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
         display: block;
       }
@@ -415,7 +418,7 @@
       .move-link {
         opacity: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: none;
         justify-content: center;
         align-items: center;
