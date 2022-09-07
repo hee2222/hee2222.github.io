@@ -87,7 +87,7 @@ gsap.to('.move-link', {
 
 document.querySelector('.move-link img').addEventListener('click', function () {
   window.open(
-    'https://forms.gle/KrSxxapHLeudTvnG6',
+    'https://docs.google.com/forms/d/e/1FAIpQLSe_D-PFBueEOr0Hbg8Kf0zg5-IZLA9WvA3my_6mEeLmVOrZOA/viewform?usp=sf_link',
     '_blank',
     'noopener, noreferrer'
   );
