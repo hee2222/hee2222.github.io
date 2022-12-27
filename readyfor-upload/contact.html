@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+  </head>
+  <body>
+    <main>
+      <img src="ready-logo.png" alt="" class="ready-logo" />
+      <div class="ready-move-btn-wrap">
+        <div class="ready-btn ready-prev-black">이전</div>
+        <div class="ready-btn ready-next-black">다음</div>
+      </div>
+      <section id="ready-contact-section" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <div>
+              <h1>Hello.</h1>
+              <h1>We are Readyfor</h1>
+            </div>
+            <div class="ready-btn ready-next-red">Contact</div>
+          </div>
+          <img src="hero-image.png" alt="" class="hero-image" />
+        </div>
+      </section>
+      <section id="ready-contact-section1" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">01</p>
+            <h2>
+              어떤 일로<br />
+              방문해주셨나요?
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="radio"
+                id="huey"
+                name="drone1"
+                value="huey"
+                checked
+              />
+              <label for="huey">프로젝트 의뢰</label>
+            </div>
+            <div>
+              <input type="radio" id="dewey" name="drone1" value="dewey" />
+              <label for="dewey">멤버 지원</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section2" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">02</p>
+            <h2>
+              진행하고 싶은<br />
+              프로젝트의<br />
+              분류를 선택해주세요.
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="checkbox"
+                id="huey11"
+                name="drone"
+                value="huey11"
+                checked
+              />
+              <label for="huey11">영상</label>
+            </div>
+            <div>
+              <input type="checkbox" id="dewey22" name="drone" value="dewey22" />
+              <label for="dewey22">디자인</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section3" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              어떤 영상을<br />
+              의뢰하고<br />
+              싶으신가요?
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="checkbox" id="huey1" name="drone33" value="huey1" checked/>
+              <label for="huey1" class="ready-mini">웹사이트</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey2" name="drone33" value="huey2" />
+              <label for="huey2" class="ready-mini">기업, 공공 행사</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey3" name="drone33" value="huey3" />
+              <label for="huey3" class="ready-mini">전문 광고 영상</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey4" name="drone33" value="huey4" />
+              <label for="huey4" class="ready-mini">기타</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section4" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">04</p>
+            <h2>
+              프로젝트의<br />
+              예상 일정을<br />
+              알려주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+              <p class="ready-sub">Start</p>
+              <div class="ready-date-all-wrap">
+              <div class="ready-date-wrap">
+                <input type="number" id="start-year" value="2022"  min="2022" max="2032"></input>
+                <div class="ready-date-btn-wrap">
+                <button class="ready-up start-year"></button>
+                <button class="ready-down ready-undo start-year"></button>
+              </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="number" id="start-month" value="12" min="1" max="12"></input>월
+                <div class="ready-date-btn-wrap">
+                <button class="ready-up start-month"></button>
+                <button class="ready-down ready-undo start-month"></button>
+                </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="text" id="start-day" value="초" maxlength="1"></input>
+                <div class="ready-date-btn-wrap">
+                <button class="ready-up start-day"></button>
+                <button class="ready-down start-month"></button>
+                </div>
+              </div>
+            </div>
+            <div>
+              ~
+            </div>
+            <p class="ready-sub">End</p>
+            <div class="ready-date-all-wrap">
+              <div class="ready-date-wrap">
+                <input type="number" id="end-year" value="2022" min="2022" max="2032"></input>
+                <div class="ready-date-btn-wrap">
+                <button class="ready-up end-year"></button>
+                <button class="ready-down ready-undo end-year"></button>
+              </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="number" id="end-month" value="12" min="1" max="12"></input>월
+                <div class="ready-date-btn-wrap">
+                <button class="ready-up end-month"></button>
+                <button class="ready-down ready-undo end-month"></button>
+                </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="text" id="end-day" value="초"  maxlength="1"></input>
+                <div class="ready-date-btn-wrap">
+                <button class="ready-up end-day"></button>
+                <button class="ready-down end-month"></button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section id="ready-contact-section5" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">05</p>
+            <h2>
+              프로젝트의<br>
+              대략적인 예산을<br>알 수 있을까요?
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="radio"
+                id="huey55"
+                name="drone55"
+                value="huey"
+                checked
+              />
+              <label for="huey55" class="ready-mini">1,000만원 미만</label>
+            </div>
+            <div>
+              <input type="radio" id="dewey51" name="drone55" value="dewey" />
+              <label for="dewey51" class="ready-mini">5,000만원 미만</label>
+            </div>
+            <div>
+              <input type="radio" id="dewey52" name="drone55" value="dewey" />
+              <label for="dewey52" class="ready-mini">5,000만원 이상</label>
+            </div>
+            <div>
+              <input type="radio" id="dewey53" name="drone55" value="dewey" />
+              <label for="dewey53" class="ready-mini">기타</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section6" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">06</p>
+            <h2>
+              작성하시는 분의<br/>정보를 알려주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="text"
+                id="huey55"
+                name="drone55"
+                placeholder="이름" 
+              />
+            </div>
+            <div>
+              <input type="text" id="dewey51" name="drone55"  placeholder="회사명" />
+            </div>
+            <div>
+              <input type="tel" id="dewey52" name="drone55" maxlength="13" placeholder="연락처"/>
+            </div>
+            <div>
+              <input type="email" id="dewey53" name="drone55"placeholder="이메일"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section7" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">07</p>
+            <h2>
+              마지막으로<br>저희가 알아야하는<br>내용이 있다면<br>적어주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <textarea id="story" name="story" placeholder="여기에 입력해주세요."></textarea>
+            </div>
+            <div class="add-file-wrap">
+              <label for="myFile" class="add-file"><span class="add-file-name">파일첨부</span></label>
+              <input type="file" id="myFile" name="filename">
+            </div>
+        </div>
+      </section>
+      <section id="ready-contact-last-section" class="ready-contact-section">
+        <div class="ready-container">
+              <h6 class="ready-en">Success</h6>
+              <div class="check-circle"></div>
+              <h1 class="ready-big">Thank you</h1>
+              <h6 class="ready-kr">의뢰해주셔서 감사합니다.<br>
+                내용을 꼼꼼히 확인 후<br>
+                24시간 내에 연락 드리겠습니다.</h6>
+                <div class="ready-btn ready-next-black">홈페이지로 돌아가기</div>
+            </div>
+      </section>
+    </main>
+  </body>
+</html>
+<script>
+  const fileInput = document.querySelectorAll('input[type="file"]');
+
+  fileInput.forEach(function(input) {
+    input.addEventListener('change', updateFileName);
+  });
+
+  function updateFileName(e) {
+      const curFile = this.files;     
+      let previewFileName = this.parentNode.querySelector('.add-file-name');
+      previewFileName.classList.add('done');
+      previewFileName.textContent = curFile[0].name;
+
+}
+function autoHypenTel(str) {
+  str = str.replace(/[^0-9]/g, '');
+  var tmp = '';
+
+  if (str.substring(0, 2) == 02) {
+    // 서울 전화번호일 경우 10자리까지만 나타나고 그 이상의 자리수는 자동삭제
+    if (str.length < 3) {
+      return str;
+    } else if (str.length < 6) {
+      tmp += str.substr(0, 2);
+      tmp += '-';
+      tmp += str.substr(2);
+      return tmp;
+    } else if (str.length < 10) {
+      tmp += str.substr(0, 2);
+      tmp += '-';
+      tmp += str.substr(2, 3);
+      tmp += '-';
+      tmp += str.substr(5);
+      return tmp;
+    } else {
+      tmp += str.substr(0, 2);
+      tmp += '-';
+      tmp += str.substr(2, 4);
+      tmp += '-';
+      tmp += str.substr(6, 4);
+      return tmp;
+    }
+  } else {
+    // 핸드폰 및 다른 지역 전화번호 일 경우
+    if (str.length < 4) {
+      return str;
+    } else if (str.length < 7) {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3);
+      return tmp;
+    } else if (str.length < 11) {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 3);
+      tmp += '-';
+      tmp += str.substr(6);
+      return tmp;
+    } else {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 4);
+      tmp += '-';
+      tmp += str.substr(7);
+      return tmp;
+    }
+  }
+  return str;
+}
+document.querySelector('input[type="tel"]').addEventListener('keyup', function(e) {
+  var _val = this.value.trim();
+  this.value = autoHypenTel(_val);
+  if(_val.length < 7) {
+    this.parentNode.classList.add('ready-error');
+  } else {
+    this.parentNode.classList.remove('ready-error');
+  }
+});
+document.querySelector('input[type="tel"]').addEventListener('focusout', function(e) {
+  var _val = this.value.trim();
+  if(_val.length < 7) {
+    this.parentNode.classList.add('ready-error');
+  } else {
+    this.parentNode.classList.remove('ready-error');
+  }
+});
+
+function verifyEmail(str) {
+  // 이메일 검증 스크립트 작성
+  var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+  // 검증에 사용할 정규식 변수 regExp에 저장
+  if (str.match(regExp) == null) {
+    return 'error';
+  }
+  return str;
+
+
+};
+
+document.querySelector('input[type="email"]').addEventListener('focusout', function() {
+  var _val = this.value;
+  if(verifyEmail(_val) =='error') {
+    this.parentNode.classList.add('ready-error');
+  } else {
+    this.parentNode.classList.remove('ready-error');
+  };
+});
+
+
+var readyTodayDate = new Date();
+
+var readyYear = readyTodayDate.getFullYear();
+let readyMonth = readyTodayDate.getMonth();
+let readyDate = readyTodayDate.getDate();
+
+function dateCheck(Date) {
+if (Date <= 10) {
+  return '초';
+} else if (Date <= 20){
+  return '중';
+} else {
+  return '말';
+}}
+
+
+
+document.querySelectorAll('.ready-date-wrap > label').forEach((data)=> {
+
+})
+document.querySelectorAll('#end-year + .ready-date-btn-wrap .ready-up').forEach(function(input) {
+  input.addEventListener('click', function(e) {
+    var changeNum = this.parentNode.parentNode.querySelector('#end-year');
+    changeNum = parseInt(changeNum);
+    readyYear = parseInt(readyYear);
+    console.log('dd', readyYear, typeof(readyYear), typeof(changeNum), readyYear - parseInt(changeNum) );
+    if ( changeNum < (parseInt(changeNum) + 5)) {
+     console.log(readyYear, readyYear);
+    }
+});
+});
+</script>
