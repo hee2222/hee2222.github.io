@@ -655,7 +655,7 @@ width: 10px;
   margin-bottom: 2px;
 }
 #ready-contact-section {
-  background-image: url('/background.png');
+  background-image: url('./background.png');
 }
 #ready-contact-section6 .ready-form-area, #ready-contact-section7 .ready-form-area,  #ready-members-section3 .ready-form-area, #ready-members-section4 .ready-form-area {
   width: 50%;
