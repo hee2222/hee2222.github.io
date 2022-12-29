@@ -178,36 +178,36 @@
         margin-top: 36px;
       }
       
-      #ready-contact-section4 p.ready-sub {
+      #ready-contact-section5 p.ready-sub {
         font-size: 1.2rem;
         line-height: 1.3rem;
         margin-bottom: 2px;
       }
-      #ready-contact-section4 .ready-form-area > div {
+      #ready-contact-section5 .ready-form-area > div {
         font-size: 3.2rem;
         line-height: 3.8rem;
       }
       .ready-date-all-wrap:nth-child(2) {
         margin-bottom: 68px;
     }
-      #ready-contact-section4 .ready-date-wrap input {
+      #ready-contact-section5 .ready-date-wrap input {
         font-size: 3.2rem;
         line-height: 3.8rem;
       }
-      #ready-contact-section4 .ready-date-wrap input[id$='year'] {
+      #ready-contact-section5 .ready-date-wrap input[id$='year'] {
         width: 78px;
       }
-      #ready-contact-section4 .ready-date-wrap input[id$='month'] {
+      #ready-contact-section5 .ready-date-wrap input[id$='month'] {
         width: 34px;
       }
-      #ready-contact-section4 .ready-date-wrap input[id$='day'] {
+      #ready-contact-section5 .ready-date-wrap input[id$='day'] {
         width: 28px;
         height: auto;
       }
-      #ready-contact-section6 .ready-form-area > div, #ready-members-section3 .ready-form-area > div {
+      #ready-contact-section7 .ready-form-area > div, #ready-members-section3 .ready-form-area > div {
         margin-bottom: 10px;
       }
-      #ready-contact-section6 .ready-form-area, #ready-contact-section7 .ready-form-area, #ready-members-section3 .ready-form-area, #ready-members-section4 .ready-form-area {
+      #ready-contact-section7 .ready-form-area, #ready-contact-section8 .ready-form-area, #ready-members-section3 .ready-form-area, #ready-members-section4 .ready-form-area {
         width: 100%;
       }
       #ready-contact-last-section .ready-container{
