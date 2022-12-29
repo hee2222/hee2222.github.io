@@ -4,14 +4,12 @@ let prevBtn = document.querySelector('.ready-move-btn-wrap .ready-prev-black');
 let submitBtn = document.querySelector(
   '.ready-move-btn-wrap .ready-next-red.submit-btn'
 );
-var order = [1, 2, 3, 4, 5, 6, 7, 8];
-var designnum = 0;
 
 function formChange(i) {
-  var formWrap = document.querySelectorAll(`input[name="form${order[i]}"]`);
+  var formWrap = document.querySelectorAll(`input[name="form${i}"]`);
   formWrap.forEach(function (el) {
     el.addEventListener('change', function () {
-      if (document.querySelector(`input[name="form${order[i]}"]:checked`)) {
+      if (document.querySelector(`input[name="form${i}"]:checked`)) {
         nextBtn.classList.remove('ready-btn-undo');
       } else {
         nextBtn.classList.add('ready-btn-undo');
@@ -21,172 +19,94 @@ function formChange(i) {
 }
 
 let sectionName = 'contact';
+let sectionNum = 1;
+
+var form2 = [];
 
 nextBtn.addEventListener('click', function () {
-  var i = btnWrap.dataset.form;
-  if (btnWrap.dataset.form == 0) {
+  nextBtn.classList.add('ready-btn-undo');
+  sectionNum = btnWrap.dataset.form;
+
+  if (sectionNum == 1) {
     gsap.to(prevBtn, {
       visibility: 'visible',
       opacity: '1',
     });
     sectionName =
-      document.querySelector(`input[name="form1"]:checked`).value === 'project'
-        ? 'contact'
-        : 'members';
+      document.querySelector(`input[name="form1"]:checked`).value == 'member'
+        ? 'members'
+        : 'contact';
   }
   if (sectionName == 'contact') {
-    if (btnWrap.dataset.form == 2) {
-      var form3 = document.querySelectorAll(
-        `#ready-contact-section2 input[name="form2"]:checked`
-      );
-      var checked3 = [...form3].map(function (el) {
-        return el.value;
-      });
-
-      if (checked3.length == 2) {
-        order.splice(3, 0, '3-1');
-      } else if (checked3[0] == 'design') {
-        order.splice(2, 1, '3-1');
+    if (sectionNum == 2) {
+      form2 = document.querySelectorAll(`input[name="form2"]:checked`);
+      form2 = [...form2].map((el) => el.value);
+      if (form2[0] == 'design') {
+        sectionNum = 3;
       }
     }
-    if (btnWrap.dataset.form == 3) {
-      if (checked3.length == 2) {
-        order.splice(3, 0, '3-1');
-      } else if (checked3[0] == 'design') {
-        order.splice(2, 1, '3-1');
-        designnum = 1;
-      }
+    console.log(form2);
+    if (sectionNum == 3 && form2[0] == 'video' && form2.length == 1) {
+      sectionNum = 4;
     }
-
-    ++i;
-    console.log(order[i]);
-    nextBtn.classList.add('ready-btn-undo');
-    if (document.querySelector(`input[name="form${order[i]}"]:checked`)) {
-      nextBtn.classList.remove('ready-btn-undo');
-    }
-
-    btnWrap.dataset.form = i;
-
-    gsap.to(`#ready-${sectionName}-section${order[i + designnum]}`, 1, {
-      x: '-100vw',
-      ease: Power3.easeOut,
-    });
-
-    if (
-      btnWrap.dataset.form == 0 + designnum ||
-      btnWrap.dataset.form == 1 + designnum ||
-      btnWrap.dataset.form == 2 + designnum ||
-      btnWrap.dataset.form == 4 + designnum
-    ) {
-      formChange(i);
-    }
-    if (btnWrap.dataset.form == 3 + designnum) {
-      document.querySelectorAll('.ready-date-btn-wrap button').forEach((el) => {
-        el.addEventListener('click', function () {
-          var formStartDay = new Date(
-            startYear.value,
-            startMonth.value,
-            startDay.value == '초' ? 10 : startDay.value == '중' ? 20 : 30
-          );
-          var formEndDay = new Date(
-            endYear.value,
-            endMonth.value,
-            endDay.value == '초' ? 10 : startDay.value == '중' ? 20 : 30
-          );
-          if (formEndDay - formStartDay > 0) {
-            nextBtn.classList.remove('ready-btn-undo');
-          } else {
-            nextBtn.classList.add('ready-btn-undo');
-          }
-        });
-      });
-    }
-
-    if (btnWrap.dataset.form == 5 + designnum) {
-      document
-        .querySelector('input[type="tel" name="member"]')
-        .addEventListener('keyup', function (e) {
-          var _val = this.value.trim();
-          if (_val.length < 7) {
-            nextBtn.classList.add('ready-btn-undo');
-          } else {
-            nextBtn.classList.remove('ready-btn-undo');
-          }
-        });
-    }
-    if (btnWrap.dataset.form == 6 + designnum) {
-      gsap.to(submitBtn, {
-        display: 'flex',
-        opacity: '1',
-      });
-      gsap.to(nextBtn, {
-        display: 'none',
-        opacity: '0',
-      });
-    }
+  } else if (sectionName == 'members') {
   }
-  if (sectionName == 'members') {
-    console.log('dd');
-    ++i;
 
-    nextBtn.classList.add('ready-btn-undo');
-    if (document.querySelector(`input[name="form${i + 2}"]:checked`)) {
-      nextBtn.classList.remove('ready-btn-undo');
-    }
+  sectionNum++;
+  gsap.to(`#ready-${sectionName}-section${sectionNum}`, {
+    x: '-100vw',
+  });
 
-    btnWrap.dataset.form = i;
+  formChange(sectionNum);
 
-    gsap.to(`#ready-members-section${i + 2}`, 1, {
-      x: '-100vw',
-      ease: Power3.easeOut,
-    });
-
-    if (btnWrap.dataset.form == 0) {
-      formChange(i);
-    }
-    if (btnWrap.dataset.form == 1) {
-      document
-        .querySelector('input[type="tel"]')
-        .addEventListener('keyup', function (e) {
-          var _val = this.value.trim();
-          if (_val.length < 7) {
-            nextBtn.classList.add('ready-btn-undo');
-          } else {
-            nextBtn.classList.remove('ready-btn-undo');
-          }
-        });
-    }
-    if (btnWrap.dataset.form == 2) {
-      gsap.to(submitBtn, {
-        display: 'flex',
-        opacity: '1',
-      });
-      gsap.to(nextBtn, {
-        display: 'none',
-        opacity: '0',
-      });
-    }
+  if (document.querySelector(`input[name="form${sectionNum}"]:checked`)) {
+    nextBtn.classList.remove('ready-btn-undo');
   }
+
+  btnWrap.dataset.form = sectionNum;
 });
 
 prevBtn.addEventListener('click', function () {
-  var i = btnWrap.dataset.form;
+  sectionNum = btnWrap.dataset.form;
   nextBtn.classList.remove('ready-btn-undo');
-  gsap.to(`#ready-${sectionName}-section${order[i]}`, {
+
+  if (sectionName == 'contact') {
+    if (sectionNum == 5) {
+      form2 = document.querySelectorAll(`input[name="form2"]:checked`);
+      form2 = [...form2].map((el) => el.value);
+      gsap.to(`#ready-contact-section5`, {
+        x: '100vw',
+      });
+
+      if (form2.length == 1 && form2[0] == 'video') {
+        sectionNum = 4;
+      }
+    }
+    if (sectionNum == 4 && form2[0] == 'design') {
+      gsap.to(`#ready-contact-section4`, {
+        x: '100vw',
+      });
+      console.log('4페이지', sectionNum);
+      sectionNum = 3;
+    }
+  }
+
+  console.log(sectionNum);
+  gsap.to(`#ready-${sectionName}-section${sectionNum}`, {
     x: '100vw',
   });
 
-  --i;
+  --sectionNum;
 
-  btnWrap.dataset.form = i;
+  formChange(sectionNum);
 
-  if (btnWrap.dataset.form == 0) {
+  if (sectionNum == 1) {
     gsap.to(prevBtn, {
       visibility: 'hidden',
       opacity: '0',
     });
   }
-  if (btnWrap.dataset.form == 6 + designnum) {
+  if (sectionNum == 6) {
     gsap.to(submitBtn, {
       display: 'none',
       opacity: '0',
@@ -196,7 +116,8 @@ prevBtn.addEventListener('click', function () {
       opacity: '1',
     });
   }
-  formChange(i);
+
+  btnWrap.dataset.form = sectionNum;
 });
 
 document.querySelector('.ready-start').addEventListener('click', function () {
@@ -207,8 +128,8 @@ document.querySelector('.ready-start').addEventListener('click', function () {
     display: 'flex',
     opacity: '1',
   });
-  btnWrap.dataset.form = 0;
-  formChange(0);
+  btnWrap.dataset.form = 1;
+  formChange(1);
 });
 
 const fileInput = document.querySelectorAll('input[type="file"]');
