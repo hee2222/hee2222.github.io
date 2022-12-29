@@ -7,24 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <main>
       <img src="ready-logo.png" alt="" class="ready-logo" />
       <div class="ready-move-btn-wrap">
         <div class="ready-btn ready-prev-black">이전</div>
-        <div class="ready-btn ready-next-black">다음</div>
+        <div class="ready-btn ready-next-black ready-btn-undo">다음</div>
+        <div class="ready-btn ready-next-red submit-btn">작성완료</div>
       </div>
-      <section id="ready-contact-section" class="ready-contact-section">
+      <section id="ready-contact-section">
         <div class="ready-container">
           <div class="ready-title-area">
-            <div>
-              <h1>Hello.</h1>
-              <h1>We are Readyfor</h1>
-            </div>
-            <div class="ready-btn ready-next-red">Contact</div>
+            <div class="ready-btn ready-next-red ready-start">Contact</div>
           </div>
-          <img src="hero-image.png" alt="" class="hero-image" />
         </div>
       </section>
       <section id="ready-contact-section1" class="ready-contact-section">
@@ -41,14 +38,13 @@
               <input
                 type="radio"
                 id="huey"
-                name="drone1"
-                value="huey"
-                checked
+                name="form1"
+                value="project"
               />
               <label for="huey">프로젝트 의뢰</label>
             </div>
             <div>
-              <input type="radio" id="dewey" name="drone1" value="dewey" />
+              <input type="radio" id="dewey" name="form1" value="member" />
               <label for="dewey">멤버 지원</label>
             </div>
           </div>
@@ -70,14 +66,13 @@
               <input
                 type="checkbox"
                 id="huey11"
-                name="drone"
-                value="huey11"
-                checked
+                name="form2"
+                value="video"
               />
               <label for="huey11">영상</label>
             </div>
             <div>
-              <input type="checkbox" id="dewey22" name="drone" value="dewey22" />
+              <input type="checkbox" id="dewey22" name="form2" value="design" />
               <label for="dewey22">디자인</label>
             </div>
           </div>
@@ -96,23 +91,58 @@
           </div>
           <div class="ready-form-area">
             <div>
-              <input type="checkbox" id="huey1" name="drone33" value="huey1" checked/>
+              <input type="checkbox" id="huey1" name="form3" value="huey1"/>
               <label for="huey1" class="ready-mini">웹사이트</label>
             </div>
             <div>
-              <input type="checkbox" id="huey2" name="drone33" value="huey2" />
-              <label for="huey2" class="ready-mini">기업, 공공 행사</label>
+              <input type="checkbox" id="huey2" name="form3" value="huey2" />
+              <label for="huey2" class="ready-mini">기업ㆍ공공 행사</label>
             </div>
             <div>
-              <input type="checkbox" id="huey3" name="drone33" value="huey3" />
+              <input type="checkbox" id="huey3" name="form3" value="huey3" />
               <label for="huey3" class="ready-mini">전문 광고 영상</label>
             </div>
             <div>
-              <input type="checkbox" id="huey4" name="drone33" value="huey4" />
+              <input type="checkbox" id="huey4" name="form3" value="huey4" />
               <label for="huey4" class="ready-mini">기타</label>
             </div>
-          </div>
         </div>
+      </div>
+      </section>
+      <section id="ready-contact-section3-1" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              어떤 디자인을<br />
+              의뢰하고<br />
+              싶으신가요?
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="checkbox" id="huey1111" name="form3-1" value="huey1"/>
+              <label for="huey1111" class="ready-mini">웹사이트</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey2111" name="form3-1" value="huey2" />
+              <label for="huey2111" class="ready-mini">모바일 웹/앱</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey3111" name="form3-1" value="huey3" />
+              <label for="huey3111" class="ready-mini">브랜드 디자인</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey4111" name="form3-1" value="huey4" />
+              <label for="huey4111" class="ready-mini">그래픽 디자인</label>
+            </div>
+            <div>
+              <input type="checkbox" id="huey5111" name="form3-1" value="huey4" />
+              <label for="huey5111" class="ready-mini">기타</label>
+            </div>
+          </div>
+      </div>  
       </section>
       <section id="ready-contact-section4" class="ready-contact-section">
         <div class="ready-container">
@@ -138,7 +168,7 @@
                 <input type="number" id="start-month" value="12" min="1" max="12"></input>월
                 <div class="ready-date-btn-wrap">
                 <button class="ready-up start-month"></button>
-                <button class="ready-down ready-undo start-month"></button>
+                <button class="ready-down start-month"></button>
                 </div>
               </div>
               <div class="ready-date-wrap">
@@ -148,9 +178,6 @@
                 <button class="ready-down start-month"></button>
                 </div>
               </div>
-            </div>
-            <div>
-              ~
             </div>
             <p class="ready-sub">End</p>
             <div class="ready-date-all-wrap">
@@ -165,7 +192,7 @@
                 <input type="number" id="end-month" value="12" min="1" max="12"></input>월
                 <div class="ready-date-btn-wrap">
                 <button class="ready-up end-month"></button>
-                <button class="ready-down ready-undo end-month"></button>
+                <button class="ready-down end-month"></button>
                 </div>
               </div>
               <div class="ready-date-wrap">
@@ -192,22 +219,21 @@
               <input
                 type="radio"
                 id="huey55"
-                name="drone55"
+                name="form5"
                 value="huey"
-                checked
               />
               <label for="huey55" class="ready-mini">1,000만원 미만</label>
             </div>
             <div>
-              <input type="radio" id="dewey51" name="drone55" value="dewey" />
+              <input type="radio" id="dewey51" name="form5" value="dewey" />
               <label for="dewey51" class="ready-mini">5,000만원 미만</label>
             </div>
             <div>
-              <input type="radio" id="dewey52" name="drone55" value="dewey" />
+              <input type="radio" id="dewey52" name="form5" value="dewey" />
               <label for="dewey52" class="ready-mini">5,000만원 이상</label>
             </div>
             <div>
-              <input type="radio" id="dewey53" name="drone55" value="dewey" />
+              <input type="radio" id="dewey53" name="form5" value="dewey" />
               <label for="dewey53" class="ready-mini">기타</label>
             </div>
           </div>
@@ -260,6 +286,63 @@
             </div>
         </div>
       </section>
+      <section id="ready-members-section2" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">02</p>
+            <h2>
+              지원하고 싶은<br />
+              포지션을<br />
+              선택해주세요.
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="radio" id="huey122" name="form2" value="huey1"/>
+              <label for="huey122" class="ready-mini">영상</label>
+            </div>
+            <div>
+              <input type="radio" id="huey222" name="form2" value="huey2" />
+              <label for="huey222" class="ready-mini">디자인</label>
+            </div>
+            <div>
+              <input type="radio" id="huey322" name="form2" value="huey3" />
+              <label for="huey322" class="ready-mini">개발</label>
+            </div>
+            <div>
+              <input type="radio" id="huey422" name="form2" value="huey4" />
+              <label for="huey422" class="ready-mini">그 외</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-members-section3" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              지원자님의<br>기본 정보를<br>알려주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="text"
+                id="huey55"
+                name="member"
+                placeholder="이름" 
+              />
+            </div>
+            <div>
+              <input type="tel" id="dewey52" name="member" maxlength="13" placeholder="연락처"/>
+            </div>
+            <div>
+              <input type="email" id="dewey53" name="member"placeholder="이메일"/>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="ready-contact-last-section" class="ready-contact-section">
         <div class="ready-container">
               <h6 class="ready-en">Success</h6>
@@ -274,144 +357,4 @@
     </main>
   </body>
 </html>
-<script>
-  const fileInput = document.querySelectorAll('input[type="file"]');
-
-  fileInput.forEach(function(input) {
-    input.addEventListener('change', updateFileName);
-  });
-
-  function updateFileName(e) {
-      const curFile = this.files;     
-      let previewFileName = this.parentNode.querySelector('.add-file-name');
-      previewFileName.classList.add('done');
-      previewFileName.textContent = curFile[0].name;
-
-}
-function autoHypenTel(str) {
-  str = str.replace(/[^0-9]/g, '');
-  var tmp = '';
-
-  if (str.substring(0, 2) == 02) {
-    // 서울 전화번호일 경우 10자리까지만 나타나고 그 이상의 자리수는 자동삭제
-    if (str.length < 3) {
-      return str;
-    } else if (str.length < 6) {
-      tmp += str.substr(0, 2);
-      tmp += '-';
-      tmp += str.substr(2);
-      return tmp;
-    } else if (str.length < 10) {
-      tmp += str.substr(0, 2);
-      tmp += '-';
-      tmp += str.substr(2, 3);
-      tmp += '-';
-      tmp += str.substr(5);
-      return tmp;
-    } else {
-      tmp += str.substr(0, 2);
-      tmp += '-';
-      tmp += str.substr(2, 4);
-      tmp += '-';
-      tmp += str.substr(6, 4);
-      return tmp;
-    }
-  } else {
-    // 핸드폰 및 다른 지역 전화번호 일 경우
-    if (str.length < 4) {
-      return str;
-    } else if (str.length < 7) {
-      tmp += str.substr(0, 3);
-      tmp += '-';
-      tmp += str.substr(3);
-      return tmp;
-    } else if (str.length < 11) {
-      tmp += str.substr(0, 3);
-      tmp += '-';
-      tmp += str.substr(3, 3);
-      tmp += '-';
-      tmp += str.substr(6);
-      return tmp;
-    } else {
-      tmp += str.substr(0, 3);
-      tmp += '-';
-      tmp += str.substr(3, 4);
-      tmp += '-';
-      tmp += str.substr(7);
-      return tmp;
-    }
-  }
-  return str;
-}
-document.querySelector('input[type="tel"]').addEventListener('keyup', function(e) {
-  var _val = this.value.trim();
-  this.value = autoHypenTel(_val);
-  if(_val.length < 7) {
-    this.parentNode.classList.add('ready-error');
-  } else {
-    this.parentNode.classList.remove('ready-error');
-  }
-});
-document.querySelector('input[type="tel"]').addEventListener('focusout', function(e) {
-  var _val = this.value.trim();
-  if(_val.length < 7) {
-    this.parentNode.classList.add('ready-error');
-  } else {
-    this.parentNode.classList.remove('ready-error');
-  }
-});
-
-function verifyEmail(str) {
-  // 이메일 검증 스크립트 작성
-  var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-  // 검증에 사용할 정규식 변수 regExp에 저장
-  if (str.match(regExp) == null) {
-    return 'error';
-  }
-  return str;
-
-
-};
-
-document.querySelector('input[type="email"]').addEventListener('focusout', function() {
-  var _val = this.value;
-  if(verifyEmail(_val) =='error') {
-    this.parentNode.classList.add('ready-error');
-  } else {
-    this.parentNode.classList.remove('ready-error');
-  };
-});
-
-
-var readyTodayDate = new Date();
-
-var readyYear = readyTodayDate.getFullYear();
-let readyMonth = readyTodayDate.getMonth();
-let readyDate = readyTodayDate.getDate();
-
-function dateCheck(Date) {
-if (Date <= 10) {
-  return '초';
-} else if (Date <= 20){
-  return '중';
-} else {
-  return '말';
-}}
-
-
-
-document.querySelectorAll('.ready-date-wrap > label').forEach((data)=> {
-
-})
-document.querySelectorAll('#end-year + .ready-date-btn-wrap .ready-up').forEach(function(input) {
-  input.addEventListener('click', function(e) {
-    var changeNum = this.parentNode.parentNode.querySelector('#end-year');
-    changeNum = parseInt(changeNum);
-    readyYear = parseInt(readyYear);
-    console.log('dd', readyYear, typeof(readyYear), typeof(changeNum), readyYear - parseInt(changeNum) );
-    if ( changeNum < (parseInt(changeNum) + 5)) {
-     console.log(readyYear, readyYear);
-    }
-});
-});
-</script>
+<script src="script.js"></script>
