@@ -170,7 +170,7 @@
         justify-content: center;
       }
       #ready-contact-section {
-        background-image: url('/mo-background.png');
+        background-image: url('./mo-background.png');
       }
       #ready-contact-section .ready-title-area .ready-btn.ready-next-red {
         width: 235px;
