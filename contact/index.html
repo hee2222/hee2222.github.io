@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" sizes="192x192" href="./favicon.png">
+      <link rel="shortcut icon" href="./favicon.png" type="image/png">
+      <link rel="apple-touch-icon" href="./favicon.png" type="image/png">
+      <title>Contact | READY FOR</title>
+      <link rel="canonical" href="https://www.readyfor.co.kr/contact">
+      <meta property="og:title" content="Contact | READY FOR">
+      <meta property="og:url" content="https://www.readyfor.co.kr/contact">
+      <meta property="og:site_name" content="READY FOR">
+      <meta property="og:type" content="website">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Contact | READY FOR">
+  
+   <meta property="og:description" content="레디포가 잘 해낼 수 있는 프로젝트인지 고민 후,
+    
+    3일 이내 연락 드리겠습니다 : )"><meta property="og:image" content="https://static.wixstatic.com/media/2ef9bc_9727378352214ce99f286b56ab36f17e~mv2.png/v1/fill/w_1920,h_1080,al_c/2ef9bc_9727378352214ce99f286b56ab36f17e~mv2.png"><meta property="og:image:width" content="1920"><meta property="og:image:height" content="1080"><meta name="twitter:description" content="레디포가 잘 해낼 수 있는 프로젝트인지 고민 후,
+    
+    3일 이내 연락 드리겠습니다 : )"><meta name="twitter:image" content="https://static.wixstatic.com/media/2ef9bc_9727378352214ce99f286b56ab36f17e~mv2.png/v1/fill/w_1920,h_1080,al_c/2ef9bc_9727378352214ce99f286b56ab36f17e~mv2.png">
+ 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <main>
+      <a href="https://www.readyfor.co.kr/" target="_blank"><img src="ready-logo.png" alt="" class="ready-logo" /></a>
+      <section id="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <div class="ready-btn ready-next-red ready-start">Contact</div>
+          </div>
+        </div>
+      </section>
+      <form method="post" action="send_mail.php" enctype='multipart/form-data'>
+      <section id="ready-contact-section1" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">01</p>
+            <h2>
+              어떤 일로<br />
+              방문해주셨나요?
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="radio"
+                id="ready-project"
+                name="contact-form1"
+                value="project"
+              />
+              <label for="ready-project">프로젝트 의뢰</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-member" name="contact-form1" value="member" />
+              <label for="ready-member">멤버 지원</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section2" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">02</p>
+            <h2>
+              진행하고 싶은<br />
+              프로젝트의<br />
+              분류를 선택해주세요.
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="checkbox"
+                id="ready-video"
+                name="contact-form2[]"
+                value="video"
+              />
+              <label for="ready-video">영상</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-design" name="contact-form2[]" value="design" />
+              <label for="ready-design">디자인</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-metaverse" name="contact-form2[]" value="metaverse" />
+              <label for="ready-metaverse">메타버스</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section3" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              어떤 영상을<br />
+              의뢰하고<br />
+              싶으신가요?
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="checkbox" id="ready-website" name="contact-form3[]" value="브랜드 영상"/>
+              <label for="ready-website" class="ready-mini">브랜드 영상</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-event" name="contact-form3[]" value="기업ㆍ공공 행사" />
+              <label for="ready-event" class="ready-mini">기업ㆍ공공 행사</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-ed" name="contact-form3[]" value="광고 영상" />
+              <label for="ready-ed" class="ready-mini">광고 영상</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-etc" name="contact-form3[]" value="기타" />
+              <label for="ready-etc" class="ready-mini">기타</label>
+            </div>
+        </div>
+      </div>
+      </section>
+      <section id="ready-contact-section4" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              어떤 디자인을<br />
+              의뢰하고<br />
+              싶으신가요?
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="checkbox" id="ready-website-design" name="contact-form4[]" value="웹 모바일 UI/UX"/>
+              <label for="ready-website-design" class="ready-mini">웹 모바일 UI/UX</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-mobile-design" name="contact-form4[]" value="App 디자인" />
+              <label for="ready-mobile-design" class="ready-mini">App 디자인</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-brand-design" name="contact-form4[]" value="브랜드 디자인" />
+              <label for="ready-brand-design" class="ready-mini">브랜드 디자인</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-graphic-design" name="contact-form4[]" value="PPT 디자인" />
+              <label for="ready-graphic-design" class="ready-mini">PPT 디자인</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-etc-design" name="contact-form4[]" value="기타" />
+              <label for="ready-etc-design" class="ready-mini">기타</label>
+            </div>
+          </div>
+      </div>  
+      </section>
+       <section id="ready-contact-section5" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              어떤 메타버스를<br />
+              의뢰하고<br />
+              싶으신가요?
+              <p class="ready-sub">중복 선택 가능합니다.</p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="checkbox" id="ready-meta-ZEP" name="contact-form5[]" value="ZEP"/>
+              <label for="ready-meta-ZEP" class="ready-mini">ZEP</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-meta-gather" name="contact-form5[]" value="게더타운" />
+              <label for="ready-meta-gather" class="ready-mini">게더타운</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ready-meta-etc" name="contact-form5[]" value="기타" />
+              <label for="ready-meta-etc" class="ready-mini">기타</label>
+            </div>
+          </div>
+      </div>  
+      </section>
+      <section id="ready-contact-section6" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">04</p>
+            <h2>
+              프로젝트의<br />
+              예상 일정을<br />
+              알려주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+              <p class="ready-sub">Start</p>
+              <div class="ready-date-all-wrap">
+              <div class="ready-date-wrap">
+                <input type="number" id="start-year" value="" name="start-year" readonly></input>
+                <div class="ready-date-btn-wrap">
+                <div class="ready-up start-year"></div>
+                <div class="ready-down ready-undo start-year"></div>
+              </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="number" id="start-month" name="start-month" value="" readonly></input>월
+                <div class="ready-date-btn-wrap">
+                <div class="ready-up start-month"></div>
+                <div class="ready-down start-month"></div>
+                </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="text" id="start-day" value="" maxlength="1" name="start-day" readonly></input>
+                <div class="ready-date-btn-wrap">
+                <div class="ready-up start-day"></div>
+                <div class="ready-down start-day"></div>
+                </div>
+              </div>
+            </div>
+            <p class="ready-sub">End</p>
+            <div class="ready-date-all-wrap">
+              <div class="ready-date-wrap">
+                <input type="number" id="end-year" name="end-year" readonly></input>
+                <div class="ready-date-btn-wrap">
+                <div class="ready-up end-year"></div>
+                <div class="ready-down ready-undo end-year"></div>
+              </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="number" id="end-month"  name="end-month" readonly></input>월
+                <div class="ready-date-btn-wrap">
+                <div class="ready-up end-month"></div>
+                <div class="ready-down end-month"></div>
+                </div>
+              </div>
+              <div class="ready-date-wrap">
+                <input type="text" id="end-day" name="end-day" value=""  maxlength="1" readonly></input>
+                <div class="ready-date-btn-wrap">
+                <div class="ready-up end-day"></div>
+                <div class="ready-down end-day"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section id="ready-contact-section7" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">05</p>
+            <h2>
+              프로젝트의<br>
+              대략적인 예산을<br>알 수 있을까요?
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="radio"
+                id="ready-1000"
+                name="contact-form7"
+                value="1,000만원 미만"
+              />
+              <label for="ready-1000" class="ready-mini">1,000만원 미만</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-5000" name="contact-form7" value="5,000만원 미만" />
+              <label for="ready-5000" class="ready-mini">5,000만원 미만</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-6000" name="contact-form7" value="5,000만원 이상" />
+              <label for="ready-6000" class="ready-mini">5,000만원 이상</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-7000" name="contact-form7" value="기타" />
+              <label for="ready-7000" class="ready-mini">기타</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section8" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">06</p>
+            <h2>
+              작성하시는 분의<br/>정보를 알려주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="text"
+                id="contact-info-name"
+                name="contact-info-name"
+                placeholder="이름" 
+              />
+            </div>
+            <div>
+              <input type="text" id="contact-info-com" name="contact-info-com"  placeholder="회사명" />
+            </div>
+            <div>
+              <input type="tel" id="contact-info-tel" name="contact-info-tel" maxlength="13" placeholder="연락처"/>
+            </div>
+            <div>
+              <input type="email" id="contact-info-mail" name="contact-info-mail"placeholder="이메일"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-contact-section9" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">07</p>
+            <h2>
+              마지막으로<br>저희가 알아야하는<br>내용이 있다면<br>적어주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <textarea id="contact-form8" name="contact-form8" placeholder="여기에 입력해주세요." style="ime-mode: active;"></textarea>
+            </div>
+            <div class="add-file-wrap">
+              <label for="contact-file" class="add-file"><span class="add-file-name">파일첨부</span></label>
+              <input type="file" id="contact-file" name="contact-file" accept="image/*, .xlsx, .xls, .pdf, .hwp, .pptx, .doc">
+            </div>
+        </div>
+      </section>
+      <section id="ready-members-section2" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">02</p>
+            <h2>
+              지원하고 싶은<br />
+              포지션을<br />
+              선택해주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input type="radio" id="ready-member-video" name="members-form2" value="영상"/>
+              <label for="ready-member-video" class="ready-mini">영상</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-member-design" name="members-form2" value="디자인" />
+              <label for="ready-member-design" class="ready-mini">디자인</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-member-develop" name="members-form2" value="개발" />
+              <label for="ready-member-develop" class="ready-mini">개발</label>
+            </div>
+            <div>
+              <input type="radio" id="ready-member-etc" name="members-form2" value="그 외" />
+              <label for="ready-member-etc" class="ready-mini">그 외</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-members-section3" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">03</p>
+            <h2>
+              지원자님의<br>기본 정보를<br>알려주세요.
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <input
+                type="text"
+                id="members-info-name"
+                name="members-info-name"
+                placeholder="이름" 
+              />
+            </div>
+            <div>
+              <input type="tel" id="members-info-tel" name="members-info-tel" maxlength="13" placeholder="연락처"/>
+            </div>
+            <div>
+              <input type="email" id="members-info-mail" name="members-info-mail"placeholder="이메일"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ready-members-section4" class="ready-contact-section">
+        <div class="ready-container">
+          <div class="ready-title-area">
+            <p class="ready-label">04</p>
+            <h2>
+              간단한 소개 작성 후<br>
+              이력서 및<br>
+              포트폴리오를<br>
+              첨부해주세요.
+              <p class="ready-sub">첨부파일이 여러개인 경우,<br>
+                이메일로 파일을 보내주세요.<br>
+                <a href="mailto:contact@readyfor.co.kr">contact@readyfor.co.kr</a></p>
+            </h2>
+          </div>
+          <div class="ready-form-area">
+            <div>
+              <textarea id="contact-member-form4" name="contact-member-form4" placeholder="여기에 입력해주세요." style="ime-mode: active;"></textarea>
+            </div>
+            <div class="add-file-wrap">
+              <label for="members-file" class="add-file"><span class="add-file-name">파일첨부</span></label>
+              <input type="file" id="members-file" name="members-file" accept="image/*, .xlsx, .xls, .pdf, .hwp, .pptx, .doc">
+            </div>
+        </div>
+      </section>
+      <div class="ready-move-btn-wrap">
+        <div class="ready-btn ready-prev-black">이전</div>
+        <div class="ready-btn ready-next-black ready-btn-undo">다음</div>
+        <button type="submit" class="ready-btn ready-next-red submit-btn ">작성완료</button>
+      </div>
+    </form>
+      <section id="ready-contact-last-section" class="ready-contact-section">
+        <div class="ready-container">
+              <h6 class="ready-en gsap-up">Success</h6>
+              <div class="check-circle gsap-up"></div>
+              <h1 class="ready-big gsap-up">Thank you</h1>
+              <div class="gsap-up ready-text-wrap gsap-up">
+              <h6 class="ready-kr">의뢰해주셔서 감사합니다.<br>
+                내용을 꼼꼼히 확인 후<br>
+                24시간 내에 연락 드리겠습니다.</h6>
+                <a href="http://www.readyfor.co.kr/" class="ready-btn ready-next-black">홈페이지로 돌아가기</a>
+              </div>
+            </div>
+      </section>
+    </main>
+  </body>
+</html>
+<script src="script.js"></script>

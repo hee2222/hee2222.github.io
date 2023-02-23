@@ -1,35 +1,42 @@
-document.addEventListener('keydown', function (e) {
-  var keycode1 = e.keyCode ? e.keyCode : e.which;
-  if (keycode1 == 0 || keycode1 == 9) {
-    if (
-      e.target == document.querySelector('#members-info-name') ||
-      e.target == document.querySelector('#members-info-tel') ||
-      e.target == document.querySelector('#contact-info-name') ||
-      e.target == document.querySelector('#contact-info-com') ||
-      e.target == document.querySelector('#contact-info-tel')
-    ) {
-      return;
-    } else {
-      e.preventDefault();
-      e.stopPropagation();
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+};
+if (!isMobile) {
+  document.addEventListener('keydown', function (e) {
+    var keycode1 = e.keyCode ? e.keyCode : e.which;
+    if (keycode1 == 0 || keycode1 == 9) {
+      if (
+        e.target == document.querySelector('#members-info-name') ||
+        e.target == document.querySelector('#members-info-tel') ||
+        e.target == document.querySelector('#contact-info-name') ||
+        e.target == document.querySelector('#contact-info-com') ||
+        e.target == document.querySelector('#contact-info-tel')
+      ) {
+        return;
+      } else {
+        e.preventDefault();
+        e.stopPropagation();
+      }
     }
-  }
-});
-document.addEventListener('keydown', function (e) {
-  var keycode1 = e.keyCode ? e.keyCode : e.which;
-  if (keycode1 == 13) {
-    if (
-      e.target == document.querySelector('#contact-form8') ||
-      e.target == document.querySelector('#contact-member-form4')
-    ) {
-      return;
-    } else {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  }
-});
+  });
 
+  document.addEventListener('keydown', function (e) {
+    var keycode1 = e.keyCode ? e.keyCode : e.which;
+    if (keycode1 == 13) {
+      if (
+        e.target == document.querySelector('#contact-form8') ||
+        e.target == document.querySelector('#contact-member-form4')
+      ) {
+        return;
+      } else {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }
+  });
+}
 document.querySelectorAll("input[type='file']").forEach((el) => {
   addEventListener('change', function () {
     if (el.value != '') {
@@ -147,16 +154,31 @@ nextBtn.addEventListener('click', function () {
   if (sectionName == 'contact') {
     form2 = document.querySelectorAll(`input[name^="contact-form2"]:checked`);
     form2 = [...form2].map((el) => el.value);
+    console.log(form2, sectionNum);
     if (sectionNum == 2) {
-      if (form2[0] == 'design' && form2.length == 1) {
+      if (form2[0] == 'design') {
         sectionNum = 3;
+      } 
+      else if (form2[0] == 'metaverse') {
+        sectionNum = 4;
       }
     }
 
-    if (sectionNum == 3 && form2[0] == 'video' && form2.length == 1) {
-      sectionNum = 4;
+    else if (sectionNum == 3) {
+      if (form2.length == 1) {
+        sectionNum = 5;
+      }
+      else if(form2[1] == 'metaverse') {
+        sectionNum = 4;
+      }
     }
-    if (sectionNum == 4) {
+
+    else if (sectionNum == 4) {
+      if(!form2.includes('metaverse')) {
+        sectionNum = 5;
+      }
+    }
+    if (sectionNum == 5) {
       nextBtn.classList.remove('ready-btn-undo');
 
       document
@@ -187,17 +209,17 @@ nextBtn.addEventListener('click', function () {
           });
         });
     }
-    if (sectionNum == 6) {
+    if (sectionNum == 7) {
       formCheck('contact');
       document
-        .querySelectorAll('#ready-contact-section7 input')
+        .querySelectorAll('#ready-contact-section8 input')
         .forEach((el) => {
           el.addEventListener('keyup', function () {
             formCheck('contact');
           });
         });
     }
-    if (sectionNum == 7) {
+    if (sectionNum == 8) {
       gsap.to(nextBtn, {
         display: 'none',
         opacity: '0',
@@ -249,7 +271,7 @@ nextBtn.addEventListener('click', function () {
     formChange(sectionNum, sectionName);
   }
   if (sectionName == 'contact') {
-    if (sectionNum == 3 || sectionNum == 4 || sectionNum == 6) {
+    if (sectionNum == 3 || sectionNum == 4 || sectionNum == 5 || sectionNum == 7) {
       formChange(sectionNum, 'contact');
     }
   }
@@ -272,24 +294,37 @@ prevBtn.addEventListener('click', function () {
   if (sectionName == 'contact') {
     form2 = document.querySelectorAll(`input[name^="contact-form2"]:checked`);
     form2 = [...form2].map((el) => el.value);
-
-    if (sectionNum == 5) {
+    console.log(sectionNum);
+    if (sectionNum == 6 && !form2.includes('metaverse')) {
+        gsap.to(`#ready-contact-section6`, {
+          x: '100vw',
+        });
+        if(form2.includes('design')){
+          sectionNum = 5;
+        } else {
+          sectionNum = 4;
+        }
+    }
+    else if (sectionNum == 5 && !form2.includes('design')) { 
       gsap.to(`#ready-contact-section5`, {
         x: '100vw',
       });
-
-      if (form2.length == 1 && form2[0] == 'video') {
+      if (form2[0] == 'video') {
         sectionNum = 4;
+      } else if(form2.length == 1) {
+        sectionNum = 3;
       }
     }
-    if (sectionNum == 4 && form2[0] == 'design' && form2.length == 1) {
-      sectionNum = 3;
-      gsap.to(`#ready-contact-section4`, {
-        x: '100vw',
-      });
+    else if (sectionNum == 4) {
+      if (!form2.includes('video')) {
+        gsap.to(`#ready-contact-section4`, {
+          x: '100vw',
+        });
+        sectionNum = 3;
+      }
     }
 
-    if (sectionNum == 8) {
+    if (sectionNum == 9) {
       gsap.to(submitBtn, {
         display: 'none',
         opacity: '0',
