@@ -136,6 +136,8 @@ main#gs8-container #content_wrap_8th .mb-200 {
   position: relative;
 }
 #content_wrap_8th .section_8th:nth-child(2) .section_8th_profile {
+  width: 383px;
+  height: auto;
   position: absolute;
   top: -330px;
   left: -100px;
@@ -197,6 +199,8 @@ main#gs8-container #content_wrap_8th .mb-200 {
   width: 100%;
   min-height: 600px;
   height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 #content_wrap_8th .section_8th:nth-child(3) .filter-wrap {
   width: 100%;
