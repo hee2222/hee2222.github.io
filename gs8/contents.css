@@ -597,6 +597,9 @@ main#gs8-container #content_wrap_8th .mb-200 {
     width: 100%;
     margin-bottom: 100px;
   }
+  #content_wrap_8th .section_8th:nth-child(2) .h1 {
+    font-size: 28px;
+  }
   #content_wrap_8th .section_8th:nth-child(2) .section_8th_profile {
     width: 180px;
     top: -220px;
