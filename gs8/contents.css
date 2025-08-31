@@ -734,9 +734,11 @@ main#gs8-container #content_wrap_8th .mb-200 {
     padding: 40px;
     padding-right: 40px;
   }
-  #content_wrap_8th .section_8th:nth-child(7) .body-8th:before {
+  #content_wrap_8th .section_8th:nth-child(7) .body-8th:before,
+  #content_wrap_8th.eco .section_8th:nth-child(7) .body-8th:before {
     content: none;
   }
+
   #content_wrap_8th .section_8th:nth-child(7) .section-wrap {
     width: 100%;
   }
@@ -746,7 +748,3 @@ main#gs8-container #content_wrap_8th .mb-200 {
     max-width: 200px;
   }
 }
-/* .all-in {
-  opacity: 0;
-  transform: translateY(20px);
-} */
