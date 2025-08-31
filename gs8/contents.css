@@ -385,7 +385,7 @@ main#gs8-container #content_wrap_8th .mb-200 {
 
 #content_wrap_8th .section_8th:nth-child(6) .content_area {
   width: 50%;
-  padding-right: 40px;
+  padding-right: 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -728,6 +728,7 @@ main#gs8-container #content_wrap_8th .mb-200 {
   }
   #content_wrap_8th .section_8th:nth-child(6) .content_area {
     width: 100%;
+    padding-right: 20px;
   }
   #content_wrap_8th .section_8th:nth-child(6) .title_area.mb-80 {
     margin-bottom: 20px;
