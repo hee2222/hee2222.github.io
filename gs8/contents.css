@@ -244,6 +244,13 @@ main#gs8-container #content_wrap_8th .mb-200 {
   height: 64px;
   width: auto;
 }
+#content_wrap_8th.team-7 .section_8th:nth-child(3) img,
+#content_wrap_8th.team-9 .section_8th:nth-child(3) img,
+#content_wrap_8th.team-11 .section_8th:nth-child(3) img,
+#content_wrap_8th.team-14 .section_8th:nth-child(3) img,
+#content_wrap_8th.team-19 .section_8th:nth-child(3) img {
+  height: 80px;
+}
 #content_wrap_8th .section_8th:nth-child(4),
 #content_wrap_8th .section_8th:nth-child(5),
 #content_wrap_8th .section_8th:nth-child(6) {
@@ -636,6 +643,13 @@ main#gs8-container #content_wrap_8th .mb-200 {
   }
   #content_wrap_8th .section_8th:nth-child(3) img {
     height: 48px;
+  }
+  #content_wrap_8th.team-7 .section_8th:nth-child(3) img,
+  #content_wrap_8th.team-9 .section_8th:nth-child(3) img,
+  #content_wrap_8th.team-11 .section_8th:nth-child(3) img,
+  #content_wrap_8th.team-14 .section_8th:nth-child(3) img,
+  #content_wrap_8th.team-19 .section_8th:nth-child(3) img {
+    height: 64px;
   }
   #content_wrap_8th .section_8th:nth-child(3) .tags-wrap {
     gap: 8px;
